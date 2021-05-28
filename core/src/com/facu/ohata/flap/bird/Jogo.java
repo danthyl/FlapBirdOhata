@@ -97,8 +97,12 @@ public class Jogo extends ApplicationAdapter {
 		batch.draw(fundo, 0,0,larguraDispositivo,alturaDispositivo);
 		//posiciona meus sprites
 		batch.draw(passaro[(int)variacao], movimentaX, posicaoInicialVerticalPassaro);
-		batch.draw(canoBaixo, posicaoCanoshorizontal - 100, alturaDispositivo/2 - canoBaixo.getHeight() - espacoEntreCanos);
-		batch.draw(canoTopo, posicaoCanoshorizontal -100, alturaDispositivo / 2 + espacoEntreCanos);
+		//batch.draw(canoBaixo, posicaoCanoshorizontal - 100, alturaDispositivo/2 - canoBaixo.getHeight() - espacoEntreCanos);
+		//batch.draw(canoTopo, posicaoCanoshorizontal -100, alturaDispositivo / 2 + espacoEntreCanos);
+		batch.draw(canoBaixo, posicaoCanoHorizontal, alturaDispositivo / 2 - canoBaixo.getHeight() - espacoEntreCanos / 2 + posicaoCanoVertical);
+		batch.draw(canoTopo, posicaoCanoHorizontal, alturaDispositivo / 2 + espacoEntreCanos / 2 + posicaoCanoVertical);
+		
+		
 		batch.end();
 	}
 
